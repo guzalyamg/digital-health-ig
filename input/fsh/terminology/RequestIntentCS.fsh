@@ -1,8 +1,10 @@
+
+
 CodeSystem: RequestIntentCS
 Id: request-intent-cs
 Title: "Request Intent CS"
 Description: "Request Intent codes for service requests in Uzbekistan Core profiles"
-// Fixed: Removed invalid insert statement that was at header level
+* insert SupplementCodeSystemDraft(request-intent-cs, $request-intent, 5.0.0)
 
 * #proposal 
   * ^designation[0].language = #uz
@@ -34,7 +36,6 @@ Description: "Request Intent codes for service requests in Uzbekistan Core profi
   * ^designation[+].language = #ru
   * ^designation[=].value = "Первичное назначение"
 
-// Fixed: Corrected indentation from 4 spaces to 2 spaces
 * #reflex-order
   * ^designation[0].language = #uz
   * ^designation[=].value = "Refleks tayinlash"
@@ -58,7 +59,3 @@ Description: "Request Intent codes for service requests in Uzbekistan Core profi
   * ^designation[=].value = "Variant"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Вариант"
-
-
-
-

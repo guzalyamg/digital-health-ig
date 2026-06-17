@@ -56,6 +56,7 @@ Instance: example-practitionerrole-freetext
 InstanceOf: UZCorePractitionerRole
 Description: "Example of a practitioner's role with a freetext description"
 Usage: #example
+
 * language = #uz
 * active = true
 * practitioner = Reference(Practitioner/example-practitioner)

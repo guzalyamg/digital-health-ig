@@ -11,17 +11,19 @@ Description: "Uz Core Profile for service requests in Uzbekistan Core profiles"
 * requisition MS
 * requisition ^short = "A common identifier used to group multiple ServiceRequest resources created as part of a single referral, visit, or a single specimen collection episode."
 * status MS
-* status ^short = "The status of a service order. Binding : http://hl7.org/fhir/request-status"
+* status ^short = "The status of a service order."
+* status from ServiceRequestStatusVS (required)
 * intent MS
-* intent ^short = "Indicates the level of obligation and intent of the service request, specifying whether the request represents an official order to be performed. Binding: http://hl7.org/fhir/request-intent"
+* intent ^short = "Indicates the level of obligation and intent of the service request, specifying whether the request represents an official order to be performed."
+* intent from ServiceIntentVS (required)
 * doNotPerform MS
 * doNotPerform ^short = "Indicates that the service described by the ServiceRequest should not be performed. "
 * code MS
-* code ^short = "Specifies the laboratory test, panel, or service being requested. The codes used represent orderable laboratory services and must not be used for analytical result observations. Binding: https://terminology.dhp.uz/fhir/core/CodeSystem/service-request-lab-research-codes-cs"
+* code ^short = "Specifies the laboratory test, panel, or service being requested. The codes used represent orderable laboratory services and must not be used for analytical result observations."
+* code from SRLabResearchsVS (required)
 * subject MS
 * subject ^short = "The patient for whom the laboratory referral or order is issued. This element identifies the individual who is the subject of the requested laboratory investigation."
 * subject only Reference(UZCorePatient or UZCoreLocation)
-// Fixed: Changed 'Encounter' to 'encounter' (element names must be lowercase in FHIR profiles)
 * encounter MS
 * encounter ^short = "The healthcare encounter during which the laboratory referral or order was created or to which the laboratory investigation is related. This element provides clinical context for the ServiceRequest, such as an outpatient visit or inpatient hospitalization."
 * encounter only Reference(UZCoreEncounter)
@@ -30,16 +32,16 @@ Description: "Uz Core Profile for service requests in Uzbekistan Core profiles"
 * authoredOn 1..1 MS
 * authoredOn ^short = "The date and time when the ServiceRequest was authored and formally issued by the requester."
 * requester MS
-* requester ^short = "A reason to a Condition or other clinical resource that represents the medical justification for the laboratory referral, such as a diagnosis coded using ICD-10. This allows structured representation of diagnosis details including onset date and clinical status. Binding: http://hl7.org/fhir/sid/icd-10"
-// Fixed: Changed 'UzCorePatiner' to 'UZCorePatient' (was a typo, also fixed case to match UZ convention)
+* requester ^short = "A reason to a Condition or other clinical resource that represents the medical justification for the laboratory referral, such as a diagnosis coded using ICD-10. This allows structured representation of diagnosis details including onset date and clinical status."
+// * requester from $icd-10
 * requester only Reference(UZCorePractitioner or UZCorePractitioner or UZCoreOrganization or UZCorePatient or UZCoreRelatedPerson)
 * reason 0..1 MS
-* reason ^short = "A reason to a Condition or other clinical resource that represents the medical justification for the laboratory referral, such as a diagnosis coded using ICD-10. This allows structured representation of diagnosis details including onset date and clinical status. Binding: http://hl7.org/fhir/sid/icd-10"
+* reason ^short = "A reason to a Condition or other clinical resource that represents the medical justification for the laboratory referral, such as a diagnosis coded using ICD-10. This allows structured representation of diagnosis details including onset date and clinical status."
+* reason from $icd-10-vs (required)
 * insurance MS
 * insurance ^short = "Insurance coverage or funding source applicable to the requested service."
 * supportingInfo MS
 * supportingInfo ^short = "Additional clinical or administrative information supporting or justifying the requested service." 
-// Fixed: Changed 'UzCoreServiceRequest' to 'UZCoreServiceRequest' (fixed case to match UZ convention)
 * supportingInfo only CodeableReference(UZCoreServiceRequest)
 * specimen MS
 * specimen ^short = "The specimen or specimens to be analyzed as part of the requested laboratory service." 
@@ -58,8 +60,8 @@ Description: "Example of a ServiceRequest for a laboratory test order in Uzbekis
 * identifier.system = "http://example.com/serviceRequest"
 * status = #active
 * intent = #order
-* subject = Reference(Patient/example-patient)
+* code =  $service-request-status#lab-A "CBC panel"
+* subject = Reference(Patient/example-salim)
 * authoredOn = "2026-01-01T10:00:00Z"
-
 
 

@@ -1,6 +1,5 @@
-Alias: $sct = http://snomed.info/sct
 
-Instance: SRLabResearchsCM
+Instance: sr-lab-researchs-cm
 InstanceOf: ConceptMap
 Usage: #definition
 Title: "SR Lab Researchs ConceptMap"
@@ -13,7 +12,7 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * publisher = "Uzinfocom"
 
 * group[+].source = "https://terminology.dhp.uz/fhir/core/CodeSystem/sr-lab-researchs-cs"
-* group[=].target = $sct
+* group[=].target = $loinc
 * group[=].element[+].code = #lab-A
 * group[=].element[=].display = "Umumiy qon tahlili"
 * group[=].element[=].target[+].code = #58410-2
@@ -314,133 +313,133 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * group[=].element[=].target[=].display = "Microscopic examination of feces"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-46a
+* group[=].element[+].code = #lab-47
 * group[=].element[=].display = "Mushak tolalari: chiziqli"
 * group[=].element[=].target[+].code = #19116-1
 * group[=].element[=].target[=].display = "Muscle fibers striated [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-47
+* group[=].element[+].code = #lab-48
 * group[=].element[=].display = "Mushak tolalari: chiziqsiz"
 * group[=].element[=].target[+].code = #19117-9
 * group[=].element[=].target[=].display = "Muscle fibers non-striated [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-48
+* group[=].element[+].code = #lab-49
 * group[=].element[=].display = "Biriktiruvchi to‘qima"
 * group[=].element[=].target[+].code = #19118-7
 * group[=].element[=].target[=].display = "Connective tissue [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-49
+* group[=].element[+].code = #lab-50
 * group[=].element[=].display = "Neytral yog‘"
 * group[=].element[=].target[+].code = #19119-5
 * group[=].element[=].target[=].display = "Neutral fat [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-50
+* group[=].element[+].code = #lab-51
 * group[=].element[=].display = "Yog‘ kislotalari"
 * group[=].element[=].target[+].code = #19120-3
 * group[=].element[=].target[=].display = "Fatty acids [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-51
+* group[=].element[+].code = #lab-52
 * group[=].element[=].display = "Sovunlar"
 * group[=].element[=].target[+].code = #19121-1
 * group[=].element[=].target[=].display = "Soaps [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-52
+* group[=].element[+].code = #lab-53
 * group[=].element[=].display = "Hazm bo‘ladigan o‘simlik tolasi"
 * group[=].element[=].target[+].code = #19122-9
 * group[=].element[=].target[=].display = "Plant fibers digested [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-53
+* group[=].element[+].code = #lab-54
 * group[=].element[=].display = "Kraxmal"
 * group[=].element[=].target[+].code = #19123-7
 * group[=].element[=].target[=].display = "Starch granules [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-54
+* group[=].element[+].code = #lab-55
 * group[=].element[=].display = "Yodofil flora"
 * group[=].element[=].target[+].code = #19124-5
 * group[=].element[=].target[=].display = "Iodophilic bacteria [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-55
+* group[=].element[+].code = #lab-56
 * group[=].element[=].display = "Kristallar"
 * group[=].element[=].target[+].code = #19125-2
 * group[=].element[=].target[=].display = "Crystals [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-56
+* group[=].element[+].code = #lab-57
 * group[=].element[=].display = "Shilliq"
 * group[=].element[=].target[+].code = #19126-0
 * group[=].element[=].target[=].display = "Mucus [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-57
+* group[=].element[+].code = #lab-58
 * group[=].element[=].display = "Epiteliy"
 * group[=].element[=].target[+].code = #19127-8
 * group[=].element[=].target[=].display = "Epithelial cells [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-58
+* group[=].element[+].code = #lab-59
 * group[=].element[=].display = "Leykotsitlar"
 * group[=].element[=].target[+].code = #19128-6
 * group[=].element[=].target[=].display = "Leukocytes [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-59
+* group[=].element[+].code = #lab-60
 * group[=].element[=].display = "Eritrotsitlar"
 * group[=].element[=].target[+].code = #19129-4
 * group[=].element[=].target[=].display = "Erythrocytes [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-60
+* group[=].element[+].code = #lab-61
 * group[=].element[=].display = "Eng sodda organizmlar (protozoylar)"
 * group[=].element[=].target[+].code = #19130-2
 * group[=].element[=].target[=].display = "Protozoa [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-61
+* group[=].element[+].code = #lab-62
 * group[=].element[=].display = "Gijja tuxumlari"
 * group[=].element[=].target[+].code = #19131-0
 * group[=].element[=].target[=].display = "Ova (helminth) [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-62
+* group[=].element[+].code = #lab-63
 * group[=].element[=].display = "Xamirturush zamburug‘lari"
 * group[=].element[=].target[+].code = #19132-8
 * group[=].element[=].target[=].display = "Yeast [Presence] in Stool by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-63
+* group[=].element[+].code = #lab-64
 * group[=].element[=].display = "Najasning mikroskopik kuzatuvi (nam preparat)"
 * group[=].element[=].target[+].code = #6470-9
 * group[=].element[=].target[=].display = "Microscopic observation [Identifier] in Stool by Wet preparation"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-64
+* group[=].element[+].code = #lab-65
 * group[=].element[=].display = "Najasning Gram bo‘yicha bo‘yalgan holda mikroskopiyasi"
 * group[=].element[=].target[+].code = #649-4
 * group[=].element[=].target[=].display = "Microscopic observation [Identifier] in Stool by Gram stain"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-65
+* group[=].element[+].code = #lab-66
 * group[=].element[=].display = "Najasning trixrom bo‘yicha bo‘yalgan holda mikroskopiyasi"
 * group[=].element[=].target[+].code = #6469-1
 * group[=].element[=].target[=].display = "Microscopic observation [Identifier] in Stool by Trichrome stain"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-66
+* group[=].element[+].code = #lab-67
 * group[=].element[=].display = "Najasning qorong‘i maydon usuli bilan mikroskopiyasi"
 * group[=].element[=].target[+].code = #20884-3
 * group[=].element[=].target[=].display = "Microscopic observation [Identifier] in Stool by Dark field examination"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-67
+* group[=].element[+].code = #lab-68
 * group[=].element[=].display = "Yorug‘lik mikroskopiyasi orqali najasda aniqlangan gijja tuxumlari va parazitlar"
 * group[=].element[=].target[+].code = #10704-5
 * group[=].element[=].target[=].display = "Ova and parasites identified in Stool by Light microscopy"
@@ -452,73 +451,73 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * group[=].element[=].target[=].display = "Urinalysis macro (dipstick) panel"
 * group[=].element[=].target[=].relationship = #source-is-narrower-than-target
 
-* group[=].element[+].code = #lab-68
+* group[=].element[+].code = #lab-69
 * group[=].element[=].display = "Siydik hajmi"
 * group[=].element[=].target[+].code = #3167-4
 * group[=].element[=].target[=].display = "Urine volume [Volume]"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-69
+* group[=].element[+].code = #lab-70
 * group[=].element[=].display = "Siydik rangi"
 * group[=].element[=].target[+].code = #5778-6
 * group[=].element[=].target[=].display = "Color of Urine"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-70
+* group[=].element[+].code = #lab-71
 * group[=].element[=].display = "Siydikning tashqi ko‘rinishi"
 * group[=].element[=].target[+].code = #5767-9
 * group[=].element[=].target[=].display = "Appearance of Urine"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-71
+* group[=].element[+].code = #lab-72
 * group[=].element[=].display = "Refraktometriya orqali siydikning solishtirma zichligi"
 * group[=].element[=].target[+].code = #5811-5
 * group[=].element[=].target[=].display = "Specific gravity of Urine by Refractometry"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-72
+* group[=].element[+].code = #lab-73
 * group[=].element[=].display = "Siydik pH darajasi"
 * group[=].element[=].target[+].code = #2756-5
 * group[=].element[=].target[=].display = "Urine pH"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-73
+* group[=].element[+].code = #lab-74
 * group[=].element[=].display = "Test-tasma orqali siydikdagi oqsil miqdori"
 * group[=].element[=].target[+].code = #5804-0
 * group[=].element[=].target[=].display = "Protein [Mass/volume] in Urine by Test strip"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-74
+* group[=].element[+].code = #lab-75
 * group[=].element[=].display = "Test-tasma orqali siydikdagi glyukoza miqdori"
 * group[=].element[=].target[+].code = #5792-7
 * group[=].element[=].target[=].display = "Glucose [Mass/volume] in Urine by Test strip"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-75
+* group[=].element[+].code = #lab-76
 * group[=].element[=].display = "Test-tasma orqali siydikdagi ketonlar miqdori"
 * group[=].element[=].target[+].code = #5797-6
 * group[=].element[=].target[=].display = "Ketones [Mass/volume] in Urine by Test strip"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-76
+* group[=].element[+].code = #lab-77
 * group[=].element[=].display = "Test-tasma orqali siydikda gemoglobinning mavjudligi"
 * group[=].element[=].target[+].code = #57751-0
 * group[=].element[=].target[=].display = "Hemoglobin [Presence] in Urine by Test strip"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-77
+* group[=].element[+].code = #lab-78
 * group[=].element[=].display = "Test-tasma orqali siydikda bilirubinning mavjudligi"
 * group[=].element[=].target[+].code = #5770-3
 * group[=].element[=].target[=].display = "Bilirubin [Presence] in Urine by Test strip"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-78
+* group[=].element[+].code = #lab-79
 * group[=].element[=].display = "Test-tasma orqali siydikda urobilinogening mavjudligi"
 * group[=].element[=].target[+].code = #20405-7
 * group[=].element[=].target[=].display = "Urobilinogen [Presence] in Urine by Test strip"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-79
+* group[=].element[+].code = #lab-80
 * group[=].element[=].display = "Siydikda o‘t kislotalarining mavjudligi"
 * group[=].element[=].target[+].code = #14631-0
 * group[=].element[=].target[=].display = "Bile acids [Presence] in Urine"
@@ -530,91 +529,91 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * group[=].element[=].target[=].display = "Microscopic observation [Identifier] in Urine sediment by Light microscopy"
 * group[=].element[=].target[=].relationship = #source-is-narrower-than-target
 
-* group[=].element[+].code = #lab-80
+* group[=].element[+].code = #lab-81
 * group[=].element[=].display = "Epiteliy: yassi"
 * group[=].element[=].target[+].code = #12258-0
 * group[=].element[=].target[=].display = "Epithelial cells.squamous [#/area] in Urine sediment by Microscopy HPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-81
+* group[=].element[+].code = #lab-82
 * group[=].element[=].display = "Epiteliy: o‘tuvchi"
 * group[=].element[=].target[+].code = #13654-9
 * group[=].element[=].target[=].display = "Epithelial cells.transitional [#/area] in Urine sediment by Microscopy HPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-82
+* group[=].element[+].code = #lab-83
 * group[=].element[=].display = "Epiteliy: buyrak epiteliyasi"
 * group[=].element[=].target[+].code = #12257-2
 * group[=].element[=].target[=].display = "Epithelial cells.renal [#/area] in Urine sediment by Microscopy HPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-83
+* group[=].element[+].code = #lab-84
 * group[=].element[=].display = "Leykotsitlar"
 * group[=].element[=].target[+].code = #20408-1
 * group[=].element[=].target[=].display = "Leukocytes [#/area] in Urine sediment by Microscopy HPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-84
+* group[=].element[+].code = #lab-85
 * group[=].element[=].display = "O‘zgargan eritrotsitlar"
 * group[=].element[=].target[+].code = #57986-7
 * group[=].element[=].target[=].display = "Erythrocytes dysmorphic [#/area] in Urine sediment by Microscopy HPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-85
+* group[=].element[+].code = #lab-86
 * group[=].element[=].display = "O‘zgarmagan eritrotsitlar"
 * group[=].element[=].target[+].code = #20409-9
 * group[=].element[=].target[=].display = "Erythrocytes [#/area] in Urine sediment by Microscopy HPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-86
+* group[=].element[+].code = #lab-87
 * group[=].element[=].display = "Silindrlar: gialinli"
 * group[=].element[=].target[+].code = #57974-3
 * group[=].element[=].target[=].display = "Casts.hyaline [#/area] in Urine sediment by Microscopy LPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-87
+* group[=].element[+].code = #lab-88
 * group[=].element[=].display = "Silindrlar: mumsimon"
 * group[=].element[=].target[+].code = #32162-6
 * group[=].element[=].target[=].display = "Casts.waxy [#/area] in Urine sediment by Microscopy LPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-88
+* group[=].element[+].code = #lab-89
 * group[=].element[=].display = "Silindrlar: donador"
 * group[=].element[=].target[+].code = #33062-0
 * group[=].element[=].target[=].display = "Casts.granular [#/area] in Urine sediment by Microscopy LPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-89
+* group[=].element[+].code = #lab-90
 * group[=].element[=].display = "Silindrlar: eritrotsitar"
 * group[=].element[=].target[+].code = #33061-2
 * group[=].element[=].target[=].display = "Casts.red blood cells [#/area] in Urine sediment by Microscopy LPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-90
+* group[=].element[+].code = #lab-91
 * group[=].element[=].display = "Silindrlar: leykotsitar"
 * group[=].element[=].target[+].code = #33060-4
 * group[=].element[=].target[=].display = "Casts.white blood cells [#/area] in Urine sediment by Microscopy LPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-91
+* group[=].element[+].code = #lab-92
 * group[=].element[=].display = "Silindrlar: epitelial"
 * group[=].element[=].target[+].code = #57976-8
 * group[=].element[=].target[=].display = "Casts.epithelial cells [#/area] in Urine sediment by Microscopy LPF"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-92
+* group[=].element[+].code = #lab-93
 * group[=].element[=].display = "Shilliq"
 * group[=].element[=].target[+].code = #28545-2
 * group[=].element[=].target[=].display = "Mucus [Presence] in Urine sediment by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-93
+* group[=].element[+].code = #lab-94
 * group[=].element[=].display = "Tuzlar"
 * group[=].element[=].target[+].code = #12261-9
 * group[=].element[=].target[=].display = "Crystals [Presence] in Urine sediment by Light microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-94
+* group[=].element[+].code = #lab-95
 * group[=].element[=].display = "Bakteriyalar"
 * group[=].element[=].target[+].code = #5769-5
 * group[=].element[=].target[=].display = "Bacteria [Presence] in Urine sediment by Light microscopy"
@@ -626,133 +625,133 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * group[=].element[=].target[=].display = "Comprehensive metabolic 2000 panel – Serum or Plasma"
 * group[=].element[=].target[=].relationship = #source-is-narrower-than-target
 
-* group[=].element[+].code = #lab-95
+* group[=].element[+].code = #lab-96
 * group[=].element[=].display = "Umumiy oqsil"
 * group[=].element[=].target[+].code = #2885-2
 * group[=].element[=].target[=].display = "Protein [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-96
+* group[=].element[+].code = #lab-97
 * group[=].element[=].display = "Albumin"
 * group[=].element[=].target[+].code = #1751-7
 * group[=].element[=].target[=].display = "Albumin [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-97
+* group[=].element[+].code = #lab-98
 * group[=].element[=].display = "Xolesterin (umumiy)"
 * group[=].element[=].target[+].code = #2093-3
 * group[=].element[=].target[=].display = "Cholesterol [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-98
+* group[=].element[+].code = #lab-99
 * group[=].element[=].display = "Triglitseridlar"
 * group[=].element[=].target[+].code = #2571-8
 * group[=].element[=].target[=].display = "Triglyceride [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-99
+* group[=].element[+].code = #lab-100
 * group[=].element[=].display = "Glyukoza"
 * group[=].element[=].target[+].code = #2345-7
 * group[=].element[=].target[=].display = "Glucose [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-100
+* group[=].element[+].code = #lab-101
 * group[=].element[=].display = "Mochevina"
 * group[=].element[=].target[+].code = #3094-0
 * group[=].element[=].target[=].display = "Urea nitrogen [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-101
+* group[=].element[+].code = #lab-102
 * group[=].element[=].display = "Kreatinin"
 * group[=].element[=].target[+].code = #2160-0
 * group[=].element[=].target[=].display = "Creatinine [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-102
+* group[=].element[+].code = #lab-103
 * group[=].element[=].display = "Umumiy bilirubin"
 * group[=].element[=].target[+].code = #1975-2
 * group[=].element[=].target[=].display = "Bilirubin.total [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-103
+* group[=].element[+].code = #lab-104
 * group[=].element[=].display = "To‘g‘ri (bog‘langan) bilirubin"
 * group[=].element[=].target[+].code = #1968-7
 * group[=].element[=].target[=].display = "Bilirubin.direct [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-104
+* group[=].element[+].code = #lab-105
 * group[=].element[=].display = "Bilvosita (erkin) bilirubin"
 * group[=].element[=].target[+].code = #1971-1
 * group[=].element[=].target[=].display = "Bilirubin.indirect [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-105
+* group[=].element[+].code = #lab-106
 * group[=].element[=].display = "Alaninaminotransferaza (ALT)"
 * group[=].element[=].target[+].code = #1742-6
 * group[=].element[=].target[=].display = "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-106
+* group[=].element[+].code = #lab-107
 * group[=].element[=].display = "Aspartataminotransferaza (AST)"
 * group[=].element[=].target[+].code = #1920-8
 * group[=].element[=].target[=].display = "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-107
+* group[=].element[+].code = #lab-108
 * group[=].element[=].display = "Laktatdegidrogenaza (LDH)"
 * group[=].element[=].target[+].code = #14804-9
 * group[=].element[=].target[=].display = "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-108
+* group[=].element[+].code = #lab-109
 * group[=].element[=].display = "Gammaglutamiltransferaza (GGT)"
 * group[=].element[=].target[+].code = #2324-2
 * group[=].element[=].target[=].display = "Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-109
+* group[=].element[+].code = #lab-110
 * group[=].element[=].display = "Alfa-amilaza"
 * group[=].element[=].target[+].code = #1798-8
 * group[=].element[=].target[=].display = "Amylase [Enzymatic activity/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-110
+* group[=].element[+].code = #lab-111
 * group[=].element[=].display = "Ishqoriy fosfataza"
 * group[=].element[=].target[+].code = #6768-6
 * group[=].element[=].target[=].display = "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-111
+* group[=].element[+].code = #lab-112
 * group[=].element[=].display = "Kaliy"
 * group[=].element[=].target[+].code = #2823-3
 * group[=].element[=].target[=].display = "Potassium [Moles/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-112
+* group[=].element[+].code = #lab-113
 * group[=].element[=].display = "Natriy"
 * group[=].element[=].target[+].code = #2951-2
 * group[=].element[=].target[=].display = "Sodium [Moles/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-113
+* group[=].element[+].code = #lab-114
 * group[=].element[=].display = "Kalsiy"
 * group[=].element[=].target[+].code = #17861-6
 * group[=].element[=].target[=].display = "Calcium [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-114
+* group[=].element[+].code = #lab-115
 * group[=].element[=].display = "Temir"
 * group[=].element[=].target[+].code = #2498-4
 * group[=].element[=].target[=].display = "Iron [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-115
+* group[=].element[+].code = #lab-116
 * group[=].element[=].display = "Fosfor"
 * group[=].element[=].target[+].code = #2777-1
 * group[=].element[=].target[=].display = "Phosphate [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-116
+* group[=].element[+].code = #lab-117
 * group[=].element[=].display = "Xlor"
 * group[=].element[=].target[+].code = #2075-0
 * group[=].element[=].target[=].display = "Chloride [Moles/volume] in Serum or Plasma"
@@ -764,67 +763,67 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * group[=].element[=].target[=].display = "Hormone studies (panel) – Serum or Plasma"
 * group[=].element[=].target[=].relationship = #source-is-narrower-than-target
 
-* group[=].element[+].code = #lab-117
+* group[=].element[+].code = #lab-118
 * group[=].element[=].display = "T3 (triiodtironin)"
 * group[=].element[=].target[+].code = #3053-6
 * group[=].element[=].target[=].display = "Triiodothyronine (T3) [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-118
+* group[=].element[+].code = #lab-119
 * group[=].element[=].display = "T4 (tiroksin)"
 * group[=].element[=].target[+].code = #3026-2
 * group[=].element[=].target[=].display = "Thyroxine (T4) [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-119
+* group[=].element[+].code = #lab-120
 * group[=].element[=].display = "TTG (tireotrop gormon)"
 * group[=].element[=].target[+].code = #3016-3
 * group[=].element[=].target[=].display = "Thyrotropin (TSH) [Units/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-120
+* group[=].element[+].code = #lab-121
 * group[=].element[=].display = "Estradiol"
 * group[=].element[=].target[+].code = #2243-4
 * group[=].element[=].target[=].display = "Estradiol (E2) [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-121
+* group[=].element[+].code = #lab-122
 * group[=].element[=].display = "Testosteron"
 * group[=].element[=].target[+].code = #2986-8
 * group[=].element[=].target[=].display = "Testosterone [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-122
+* group[=].element[+].code = #lab-123
 * group[=].element[=].display = "Kortizol"
 * group[=].element[=].target[+].code = #2143-6
 * group[=].element[=].target[=].display = "Cortisol [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-123
+* group[=].element[+].code = #lab-124
 * group[=].element[=].display = "Prolaktin"
 * group[=].element[=].target[+].code = #2842-3
 * group[=].element[=].target[=].display = "Prolactin [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-124
+* group[=].element[+].code = #lab-125
 * group[=].element[=].display = "LG (luteinlashtiruvchi gormon)"
 * group[=].element[=].target[+].code = #10501-5
 * group[=].element[=].target[=].display = "Luteinizing hormone (LH) [Units/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-125
+* group[=].element[+].code = #lab-126
 * group[=].element[=].display = "FSG (follikulni rag‘batlantiruvchi gormon)"
 * group[=].element[=].target[+].code = #15067-2
 * group[=].element[=].target[=].display = "Follicle stimulating hormone (FSH) [Units/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-126
+* group[=].element[+].code = #lab-127
 * group[=].element[=].display = "Progesteron"
 * group[=].element[=].target[+].code = #2839-9
 * group[=].element[=].target[=].display = "Progesterone [Mass/volume] in Serum or Plasma"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-127
+* group[=].element[+].code = #lab-128
 * group[=].element[=].display = "PSA (prostata-spetsifik antigen)"
 * group[=].element[=].target[+].code = #2857-1
 * group[=].element[=].target[=].display = "Prostate specific Ag (PSA) [Mass/volume] in Serum or Plasma"
@@ -836,115 +835,115 @@ Description: "Maps Uzbekistan local laboratory research codes to LOINC"
 * group[=].element[=].target[=].display = "Semen analysis (panel) – Semen"
 * group[=].element[=].target[=].relationship = #source-is-narrower-than-target
 
-* group[=].element[+].code = #lab-128
+* group[=].element[+].code = #lab-129
 * group[=].element[=].display = "Hajmi"
 * group[=].element[=].target[+].code = #10586-6
 * group[=].element[=].target[=].display = "Semen volume [Volume]"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-129
+* group[=].element[+].code = #lab-130
 * group[=].element[=].display = "Rangi"
 * group[=].element[=].target[+].code = #10587-4
 * group[=].element[=].target[=].display = "Semen color [Type]"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-130
+* group[=].element[+].code = #lab-131
 * group[=].element[=].display = "Hidi"
 * group[=].element[=].target[+].code = #10588-2
 * group[=].element[=].target[=].display = "Semen odor [Type]"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-131
+* group[=].element[+].code = #lab-132
 * group[=].element[=].display = "Suyulish vaqti"
 * group[=].element[=].target[+].code = #10590-8
 * group[=].element[=].target[=].display = "Semen liquefaction time"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-132
+* group[=].element[+].code = #lab-133
 * group[=].element[=].display = "Kislotaliligi (pH)"
 * group[=].element[=].target[+].code = #10589-0
 * group[=].element[=].target[=].display = "Semen pH"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-133
+* group[=].element[+].code = #lab-134
 * group[=].element[=].display = "Qovushqoqligi"
 * group[=].element[=].target[+].code = #10591-6
 * group[=].element[=].target[=].display = "Semen viscosity [Presence]"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-134
+* group[=].element[+].code = #lab-135
 * group[=].element[=].display = "1 ml dagi spermatozoidlar soni"
 * group[=].element[=].target[+].code = #11068-0
 * group[=].element[=].target[=].display = "Spermatozoa [#/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-135
+* group[=].element[+].code = #lab-136
 * group[=].element[=].display = "Umumiy hajmdagi spermatozoidlar soni"
 * group[=].element[=].target[+].code = #72514-3
 * group[=].element[=].target[=].display = "Spermatozoa total count [#] in Ejaculate"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-136
+* group[=].element[+].code = #lab-137
 * group[=].element[=].display = "Harakatchanlik — faol"
 * group[=].element[=].target[+].code = #10610-4
 * group[=].element[=].target[=].display = "Spermatozoa progressive motility [#/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-137
+* group[=].element[+].code = #lab-138
 * group[=].element[=].display = "Harakatchanlik — sust"
 * group[=].element[=].target[+].code = #10611-2
 * group[=].element[=].target[=].display = "Spermatozoa non-progressive motility [#/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-138
+* group[=].element[+].code = #lab-139
 * group[=].element[=].display = "Harakatchanlik — harakatsiz"
 * group[=].element[=].target[+].code = #10612-0
 * group[=].element[=].target[=].display = "Spermatozoa immotile [#/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-139
+* group[=].element[+].code = #lab-140
 * group[=].element[=].display = "Tirik spermatozoidlar"
 * group[=].element[=].target[+].code = #11070-6
 * group[=].element[=].target[=].display = "Spermatozoa viability [#/volume] in Semen by Stain"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-140
+* group[=].element[+].code = #lab-141
 * group[=].element[=].display = "Spermatozoidlarning patologik shakllari"
 * group[=].element[=].target[+].code = #10613-8
 * group[=].element[=].target[=].display = "Spermatozoa abnormal forms [#/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-141
+* group[=].element[+].code = #lab-142
 * group[=].element[=].display = "Spermatogenez epiteliyasi"
 * group[=].element[=].target[+].code = #10614-6
 * group[=].element[=].target[=].display = "Epithelial cells [Presence] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-142
+* group[=].element[+].code = #lab-143
 * group[=].element[=].display = "Leykotsitlar"
 * group[=].element[=].target[+].code = #10592-4
 * group[=].element[=].target[=].display = "Leukocytes [#/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-143
+* group[=].element[+].code = #lab-144
 * group[=].element[=].display = "Letsitin donachalari"
 * group[=].element[=].target[+].code = #19159-1
 * group[=].element[=].target[=].display = "Lecithin bodies [Presence] in Semen by Microscopy"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-144
+* group[=].element[+].code = #lab-145
 * group[=].element[=].display = "Agglyutinatsiya"
 * group[=].element[=].target[+].code = #10615-3
 * group[=].element[=].target[=].display = "Spermatozoa agglutination [Presence] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-145
+* group[=].element[+].code = #lab-146
 * group[=].element[=].display = "Fruktoza"
 * group[=].element[=].target[+].code = #10593-2
 * group[=].element[=].target[=].display = "Fructose [Moles/volume] in Semen"
 * group[=].element[=].target[=].relationship = #equivalent
 
-* group[=].element[+].code = #lab-146
+* group[=].element[+].code = #lab-147
 * group[=].element[=].display = "Limon kislotasi"
 * group[=].element[=].target[+].code = #10594-0
 * group[=].element[=].target[=].display = "Citric acid [Moles/volume] in Semen"

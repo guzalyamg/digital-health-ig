@@ -175,3 +175,7 @@ Alias: $ucum-vs = http://hl7.org/fhir/ValueSet/ucum-units
 
 Alias: $adverse-event-actuality = http://hl7.org/fhir/adverse-event-actuality
 Alias: $adverse-event-seriousness = http://terminology.hl7.org/CodeSystem/adverse-event-seriousness
+Alias: $request-intent = http://hl7.org/fhir/request-intent
+Alias: $service-request-status = http://hl7.org/fhir/request-status
+Alias: $task-status = http://hl7.org/fhir/task-status
+Alias: $task-intent = http://hl7.org/fhir/task-intent
