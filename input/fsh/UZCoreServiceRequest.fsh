@@ -17,7 +17,7 @@ Description: "Uz Core Profile for service requests in Uzbekistan Core profiles"
 * intent ^short = "Indicates the level of obligation and intent of the service request, specifying whether the request represents an official order to be performed."
 * intent from ServiceIntentVS (required)
 * doNotPerform MS
-* doNotPerform ^short = "Indicates that the service described by the ServiceRequest should not be performed. "
+* doNotPerform ^short = "Indicates that the service described by the ServiceRequest should not be performed."
 * code MS
 * code ^short = "Specifies the laboratory test, panel, or service being requested. The codes used represent orderable laboratory services and must not be used for analytical result observations."
 * code from SRLabResearchsVS (required)
@@ -60,7 +60,7 @@ Description: "Example of a ServiceRequest for a laboratory test order in Uzbekis
 * identifier.system = "http://example.com/serviceRequest"
 * status = #active
 * intent = #order
-* code =  $service-request-status#lab-A "CBC panel"
+* code =  $sr-lab-researchs-cs#lab-A "Umumiy qon tahlili"
 * subject = Reference(Patient/example-salim)
 * authoredOn = "2026-01-01T10:00:00Z"
 

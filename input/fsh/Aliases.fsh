@@ -179,3 +179,4 @@ Alias: $request-intent = http://hl7.org/fhir/request-intent
 Alias: $service-request-status = http://hl7.org/fhir/request-status
 Alias: $task-status = http://hl7.org/fhir/task-status
 Alias: $task-intent = http://hl7.org/fhir/task-intent
+Alias: $sr-lab-researchs-cs = https://terminology.dhp.uz/fhir/core/CodeSystem/sr-lab-researchs-cs

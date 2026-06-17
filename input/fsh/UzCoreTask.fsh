@@ -4,6 +4,10 @@ Id: uz-core-task
 Title: "Uzbekistan Core Task"
 Description: "Profile for Uz Core Task"
 
+* ^experimental = true
+* ^publisher = "Uzinfocom"
+* ^status = #active
+
 * identifier 0..1 MS
 * code MS
 * basedOn 1..1 MS
@@ -215,7 +219,7 @@ Description: "Example Task referencing a ServiceRequest in Uzbekistan Core profi
 * status = #requested
 * intent = #order
 
-* code = task-codes-cs#approve-family-doctor "Approve Family Doctor"
+* code = task-codes-cs#approve-family-doctor "Family doctor approval"
 
 * businessStatus = task-business-status-cs#on-hold "Suspended"
 
