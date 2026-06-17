@@ -60,7 +60,7 @@ Description: "Example of a ServiceRequest for a laboratory test order in Uzbekis
 * identifier.system = "http://example.com/serviceRequest"
 * status = #active
 * intent = #order
-* code =  $sr-lab-researchs-cs#lab-A "Umumiy qon tahlili"
+* code =  $sr-lab-researchs-cs#lab-A "CBC panel"
 * subject = Reference(Patient/example-salim)
 * authoredOn = "2026-01-01T10:00:00Z"
 
