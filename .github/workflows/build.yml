@@ -2,9 +2,9 @@ name: Build FHIR IG
 
 on:
   push:
-    branches: [ ServiceRequest ]
+    branches: [ UZCoreServiceRequest ]
   pull_request:
-    branches: [ ServiceRequest ]
+    branches: [ UZCoreServiceRequest ]
 
 jobs:
   build:
