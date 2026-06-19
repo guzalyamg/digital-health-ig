@@ -110,6 +110,7 @@ Description: "Uzbekistan Core Organization profile, used to represent healthcare
 * type[organizationGrouping] from OrganizationGroupVS (required)
 * type[organizationGrouping].coding 1..* MS
 * type[organizationGrouping].coding.system 1..1 MS
+* type[organizationGrouping].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-group-cs"
 * type[organizationGrouping].coding.code 1..1 MS
 
 * name MS

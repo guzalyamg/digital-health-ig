@@ -47,7 +47,7 @@ Usage: #example
 * language = #uz
 * active = true
 * practitioner = Reference(Practitioner/example-practitioner)
-* organization = Reference(Organization/example-organization)
+* organization = Reference(example-uz-core-organization)
 * code = position-and-profession-cs#2212.14 "Vrach ginekolog"
 * specialty = profession-specialization-cs#394585009 "Akusherlik va ginekologiya"
 * healthcareService = Reference(HealthcareService/example-healthcareservice)
@@ -60,6 +60,6 @@ Usage: #example
 * language = #uz
 * active = true
 * practitioner = Reference(Practitioner/example-practitioner)
-* organization = Reference(Organization/example-organization)
+* organization = Reference(Organization/example-uz-core-organization)
 * code.text = "Surgeon at Republican Specialized Scientific Center of Surgery, inpatient care"
 * healthcareService = Reference(HealthcareService/example-healthcareservice)
