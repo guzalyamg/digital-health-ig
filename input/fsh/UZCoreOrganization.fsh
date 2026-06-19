@@ -68,7 +68,7 @@ Description: "Uzbekistan Core Organization profile, used to represent healthcare
 * type[organizationType] from OrganizationTypeVS (required)
 * type[organizationType].coding 1..* MS
 * type[organizationType].coding.system 1..1 MS
-* type[organizationType].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-types-uz-cs"
+* type[organizationType].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-type-cs"
 * type[organizationType].coding.code 1..1 MS
 
 * type[subordinationGroup] from OrganizationalSubordinationGroupVS (required)
@@ -146,7 +146,7 @@ Description: "Example of a healthcare organization in Uzbekistan - Republican On
 
 * active = true
 
-* type[organizationType].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-types-uz-cs"
+* type[organizationType].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-type-cs"
 * type[organizationType].coding.code = #I
 * type[organizationType].coding.display = "Boshqaruv bo'yicha taqsimlanishi"
 
@@ -164,7 +164,7 @@ Description: "Example of a healthcare organization in Uzbekistan - Republican On
 
 * type[organizationalServiceGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-service-group-cs"
 * type[organizationalServiceGroup].coding.code = #III_200
-* type[organizationalServiceGroup].coding.display = "Statsionar bo'limi mavjud"
+* type[organizationalServiceGroup].coding.display = "Statsionar boʻlimi mavjud"
 
 * type[specialization].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-specialization-cs"
 * type[specialization].coding.code = #145
