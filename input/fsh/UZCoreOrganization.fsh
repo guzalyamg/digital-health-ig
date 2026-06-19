@@ -167,7 +167,7 @@ Description: "Example of a healthcare organization in Uzbekistan - Republican On
 * type[organizationalServiceGroup].coding.display = "Statsionar boʻlimi mavjud"
 
 * type[specialization].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-specialization-cs"
-* type[specialization].coding.code = #145
+* type[specialization].coding.code = #145.0
 * type[specialization].coding.display = "Kattalar onkologiyasi"
 
 * name = "Respublika Onkologiya Markazi"
