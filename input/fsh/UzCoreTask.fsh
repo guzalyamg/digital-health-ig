@@ -1,3 +1,9 @@
+Invariant: uzcore-tsk-1
+Description: "If Task.status is not completed, cancelled, or failed, and requestedPeriod.end is in the past, businessStatus should be set to overdue for SLA monitoring"
+Severity: #warning
+Expression: "(status != 'completed' and status != 'cancelled' and status != 'failed' and requestedPeriod.end.exists() and requestedPeriod.end < now()) implies businessStatus.coding.exists(code = 'overdue')"
+
+
 Profile: UzCoreTask
 Parent: Task
 Id: uz-core-task
@@ -12,7 +18,9 @@ Description: "Profile for Uz Core Task"
 * code MS
 * basedOn 1..1 MS
 * basedOn ^short = "Request fulfilled by this task"
+* basedOn only Reference(ServiceRequest)
 * partOf MS
+* partOf only Reference(Task)
 * status 1..1 MS
 * status ^short = "Composite task"
 * status from TaskStatusVS (required)
@@ -24,6 +32,7 @@ Description: "Profile for Uz Core Task"
 * focus ^short = "What task is acting on"
 * focus only Reference(ServiceRequest) 
 * for MS
+* for only Reference(Patient)
 * owner MS
 * owner only Reference(UZCoreOrganization or UZCorePractitionerRole)
 * requestedPeriod MS
@@ -33,7 +42,7 @@ Description: "Profile for Uz Core Task"
 * executionPeriod.start MS
 * executionPeriod.end MS 
 
-
+* obeys uzcore-tsk-1
 
 Instance: example-task-1
 InstanceOf: UzCoreTask
