@@ -1,8 +1,14 @@
 CodeSystem: OrganizationalStructureCS
 Id: organizational-structure-cs
 Title: "Organizational Structure"
-Description: "Detailed classification of healthcare institution types (e.g., specialized centers, clinical hospitals, dispensaries). This is a granular categorization defined by the Ministry of Health; for high-level functional groupings, see NomenclatureGroupCS."
+Description: "Organizational Structure"
+
+* ^status = #active
+* ^experimental = true
+* ^publisher = "Uzinfocom"
+
 * insert OriginalCodeSystemDraft(organizational-structure-cs)
+
 * #110 "Ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Специализированный научно-практический медицинский центр"
@@ -29,9 +35,9 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #116 "Tibbiyot markazi markazi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Медицинский центр"
+  * ^designation[=].value = "Медицинский центр Центр"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Medical center"
+  * ^designation[=].value = "Medical center center"
 
 * #118 "Reabilitatsiya markazi"
   * ^designation[0].language = #ru
@@ -47,9 +53,9 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #122 "Tuman (shahar)lararo Perinatal markazi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Межрайонный (межгородской) перинатальный центр"
+  * ^designation[=].value = "Межрайонный (городской) перинатальный центр"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Interdistrict (intercity) perinatal center"
+  * ^designation[=].value = "District (city) inter-district perinatal center"
 
 * #124 "Shahar (tuman) tugʻruq kompleksi"
   * ^designation[0].language = #ru
@@ -59,13 +65,13 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #126 "Shoshilinch tibbiy yordam ilmiy markazi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Научный центр скорой медицинской помощи"
+  * ^designation[=].value = "Центр неотложной медицинской помощи"
   * ^designation[+].language = #en
   * ^designation[=].value = "Emergency medical care scientific center"
 
 * #128 "Milliy tibbiyot markazi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Национальный медицинский центр"
+  * ^designation[=].value = "Национальный Медицинский Центр"
   * ^designation[+].language = #en
   * ^designation[=].value = "National medical center"
 
@@ -91,7 +97,7 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
   * ^designation[0].language = #ru
   * ^designation[=].value = "Научно-исследовательский институт"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Research institute"
+  * ^designation[=].value = "Scientific research institute"
 
 * #138 "Koʻp tarmoqli klinikasi"
   * ^designation[0].language = #ru
@@ -125,11 +131,11 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #148 "Tibbiyot birlashmasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Медицинское объединение"
+  * ^designation[=].value = "Медицинская Ассоциация"
   * ^designation[+].language = #en
   * ^designation[=].value = "Medical association"
 
-* #150 "Ixtisoslashgan dispanser"
+* #150 "Ixtisoshgan dispanser"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Специализированный диспансер"
   * ^designation[+].language = #en
@@ -155,189 +161,189 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #158 "Qishloq uchastka shifoxonasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Сельская участковая больница"
+  * ^designation[=].value = "Сельская районная больница"
   * ^designation[+].language = #en
   * ^designation[=].value = "Rural district hospital"
 
 * #211 "Tez tibbiy yordam stansiyasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Станция скорой медицинской помощи"
+  * ^designation[=].value = "Станция скорой помощи"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Emergency medical service station"
+  * ^designation[=].value = "Emergency medical station"
 
 * #213 "Tez tibbiy yordam stansiyasi shahobchasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Подстанция скорой медицинской помощи"
+  * ^designation[=].value = "Филиал станции скорой помощи"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Emergency medical service substation"
+  * ^designation[=].value = "Emergency medical station branch"
 
 * #215 "Tez tibbiy yordam tayanch punkti"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Опорный пункт скорой медицинской помощи"
+  * ^designation[=].value = "Базовая станция скорой помощи"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Emergency medical service support point"
+  * ^designation[=].value = "Emergency medical base"
 
 * #311 "Ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника специализированного научно-практического медицинского центра"
+  * ^designation[=].value = "Поликлиника Специализированного научно-практического медицинского центра"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the specialized scientific and practical medical center"
+  * ^designation[=].value = "Specialized Scientific and Practical Medical Center Polyclinic"
 
 * #313 "Ixtisoslashtirilgan ilmiy markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника специализированного научного центра"
+  * ^designation[=].value = "Специализированный научный центр Поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the specialized scientific center"
+  * ^designation[=].value = "Specialized Scientific Center Polyclinic"
 
 * #315 "Ixtisoslashtirilgan markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника специализированного центра"
+  * ^designation[=].value = "Специализированный центр поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the specialized center"
+  * ^designation[=].value = "Specialized Center Polyclinic"
 
 * #317 "Tibbiyot markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника медицинского центра"
+  * ^designation[=].value = "Медицинский центр Поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the medical center"
+  * ^designation[=].value = "Medical Center Polyclinic"
 
 * #319 "Reabilitatsiya markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника реабилитационного центра"
+  * ^designation[=].value = "Реабилитационный центр Поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the rehabilitation center"
+  * ^designation[=].value = "Rehabilitation Center Polyclinic"
 
 * #321 "Perinatal markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника перинатального центра"
+  * ^designation[=].value = "Перинатальный центр Поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the perinatal center"
+  * ^designation[=].value = "Perinatal Center Polyclinic"
 
 * #323 "Milliy tibbiyot markazi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Национальный медицинский центр"
+  * ^designation[=].value = "Национальный Медицинский Центр"
   * ^designation[+].language = #en
-  * ^designation[=].value = "National medical center"
+  * ^designation[=].value = "National Medical Center Polyclinic"
 
 * #325 "Klinikalar (oliy tibbiy taʼlim yurtlari va ilmiy-tekshirish institutlari qoshidagi) poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника клиник (при высших медицинских учебных заведениях и научно-исследовательских институтах)"
+  * ^designation[=].value = "Поликлиники клиник (при высших медицинских учебных заведениях и научно-исследовательских институтах)"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of clinics (affiliated with higher medical educational institutions and research institutes)"
+  * ^designation[=].value = "Clinics (at Higher Medical Universities and Research Institutes) Polyclinic"
 
 * #327 "Koʻp tarmoqli tibbiyot markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника многопрофильного медицинского центра"
+  * ^designation[=].value = "Поликлиника Многопрофильного Медицинского Центра"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the multidisciplinary medical center"
+  * ^designation[=].value = "Multidisciplinary Medical Center Polyclinic"
 
 * #329 "Bolalar koʻp tarmoqli tibbiyot markazi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника детского многопрофильного медицинского центра"
+  * ^designation[=].value = "Детский многопрофильный медицинский центр Поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the children's multidisciplinary medical center"
+  * ^designation[=].value = "Children's Multidisciplinary Medical Center Polyclinic"
 
 * #331 "Ilmiy-tekshirish instituti poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника научно-исследовательского института"
+  * ^designation[=].value = "Поликлиника НИИ"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the research institute"
+  * ^designation[=].value = "Scientific Research Institute Polyclinic"
 
 * #333 "Koʻp tarmoqli klinikasi poliklinikasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Поликлиника многопрофильной клиники"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the multidisciplinary clinic"
+  * ^designation[=].value = "Multidisciplinary Clinic Polyclinic"
 
 * #335 "Klinik shifoxonasi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника клинической больницы"
+  * ^designation[=].value = "Клиническая больница поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the clinical hospital"
+  * ^designation[=].value = "Clinical Hospital Polyclinic"
 
 * #337 "Maxsus shifoxonasi poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника специальной больницы"
+  * ^designation[=].value = "Специализированная больница-поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the special hospital"
+  * ^designation[=].value = "Specialized Hospital Polyclinic"
 
 * #339 "Markaziy konsultativ-diagnostika poliklinikasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Центральная консультативно-диагностическая поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Central consultative and diagnostic polyclinic"
+  * ^designation[=].value = "Central Consultative and Diagnostic Polyclinic"
 
 * #341 "Stomatologiya poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Стоматологическая поликлиника"
+  * ^designation[=].value = "Стоматологическая клиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Dental polyclinic"
+  * ^designation[=].value = "Stomatological Polyclinic"
 
 * #343 "Tibbiy diagnostika markazi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Медицинский диагностический центр"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Medical diagnostic center"
+  * ^designation[=].value = "Medical Diagnostic Center"
 
 * #345 "Markaz va dispanser poliklinikasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Поликлиника центра и диспансера"
+  * ^designation[=].value = "Центр и диспансерная поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Polyclinic of the center and dispensary"
+  * ^designation[=].value = "Central and Dispensary Polyclinic"
 
 * #347 "Tuman (shahar) koʻp tarmoqli markaziy poliklinikasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Районная (городская) многопрофильная центральная поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "District (city) multidisciplinary central polyclinic"
+  * ^designation[=].value = "District (City) Multidisciplinary Central Polyclinic"
 
 * #349 "Shahar poliklinikasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Городская поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "City polyclinic"
+  * ^designation[=].value = "City Polyclinic"
 
 * #351 "Oilaviy poliklinika"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Семейная поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Family polyclinic"
+  * ^designation[=].value = "Family Polyclinic"
 
 * #353 "Bolalar stomatologiya poliklinikasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Детская стоматологическая поликлиника"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Children's dental polyclinic"
+  * ^designation[=].value = "Children's Dental Polyclinic"
 
 * #355 "Oilaviy shifokorlik punkti"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Пункт семейного врача"
+  * ^designation[=].value = "Клиника семейной медицины"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Family doctor point"
+  * ^designation[=].value = "Family Medical Point"
 
 * #357 "Mahalla tayanch punkti"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Опорный пункт махалли"
+  * ^designation[=].value = "Махаллинский медицинский пункт"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Mahalla support point"
+  * ^designation[=].value = "Neighborhood Base Point"
 
 * #411 "Ftiziatriya sanatoriyasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Фтизиатрический санаторий"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Phthisiatric sanatorium"
+  * ^designation[=].value = "Phthisiology sanatorium"
 
 * #413 "Bolalar ftiziatriya sanatoriyasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Детский фтизиатрический санаторий"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Children's phthisiatric sanatorium"
+  * ^designation[=].value = "Children's phthisiology sanatorium"
 
 * #415 "Surunkkli kasalligi va nogironligi mavjud bolalar uchun xududiy tibbiyot reablitatsiya markazi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Территориальный центр медицинской реабилитации для детей с хроническими заболеваниями и инвалидностью"
+  * ^designation[=].value = "Областной медицинский реабилитационный центр для детей с хроническими заболеваниями и ограниченными возможностями"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Territorial medical rehabilitation center for children with chronic diseases and disabilities"
+  * ^designation[=].value = "Regional medical rehabilitation center for children with chronic diseases and disabilities"
 
 * #417 "Bolalar revmatologiya sanatoriyasi"
   * ^designation[0].language = #ru
@@ -347,39 +353,39 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #419 "Bolalar maxsuslashgan sixatgoxi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Детский специализированный оздоровительный санаторий"
+  * ^designation[=].value = "Специализированная детская больница"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Children's specialized health resort"
+  * ^designation[=].value = "Specialized children's sanatorium"
 
-* #421 "\"Ona va bola \" sihatgoxi"
+* #421 "Ona va bola sihatgoxi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Оздоровительный центр «Мать и дитя»"
+  * ^designation[=].value = "Санаторий «Мать и дитя»"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Mother and child health resort"
+  * ^designation[=].value = "Mother and Child sanatorium"
 
 * #911 "Sogʻliqni saqlash (vazirligi) boshqarmasi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Управление здравоохранения (министерства)"
+  * ^designation[=].value = "Департамент здравоохранения (Министерство)"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Health administration (ministry)"
+  * ^designation[=].value = "Department of Health (Ministry)"
 
 * #913 "Tibbiyot tashkilotlarini muvofiqlashtruvchi muassasalari"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Учреждения, координирующие медицинские организации"
+  * ^designation[=].value = "Координирующие учреждения медицинских организаций"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Institutions coordinating medical organizations"
+  * ^designation[=].value = "Coordinating institutions of medical organizations"
 
 * #915 "Tibbiyot akademiyasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Медицинская академия"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Medical academy"
+  * ^designation[=].value = "Medical Academy"
 
 * #917 "Tibbiyot xodimlarining kasbiy malakasini rivojlantirish muassasalari"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Учреждения развития профессиональной квалификации медицинских работников"
+  * ^designation[=].value = "Учреждения повышения профессиональной квалификации медицинских кадров"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Institutions for professional qualification development of medical workers"
+  * ^designation[=].value = "Institutions for the development of professional qualifications of medical personnel"
 
 * #919 "Tibbiyot instituti"
   * ^designation[0].language = #ru
@@ -395,60 +401,60 @@ Description: "Detailed classification of healthcare institution types (e.g., spe
 
 * #923 "Salomatlik texnikumi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Техникум здоровья"
+  * ^designation[=].value = "Техническая школа здравоохранения"
   * ^designation[+].language = #en
   * ^designation[=].value = "Health technical school"
 
 * #925 "Sogʻliqni saqlash muzeyi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Музей здравоохранения"
+  * ^designation[=].value = "Музей здоровья"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Health care museum"
+  * ^designation[=].value = "Health Museum"
 
 * #927 "Gazetasi tahririyati"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Редакция газеты"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Newspaper editorial office"
+  * ^designation[=].value = "Newspaper Editorial Office"
 
 * #929 "Jurnali tahririyati"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Редакция журнала"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Journal editorial office"
+  * ^designation[=].value = "Magazine Editorial Office"
 
 * #931 "Ilmiy-tibbiyot kutubxonasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Научно-медицинская библиотека"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Scientific medical library"
+  * ^designation[=].value = "Scientific and Medical Library"
 
 * #933 "Xoʻjalik hisobidagi dezinfeksiya"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Хозрасчётная дезинфекция"
+  * ^designation[=].value = "Дезинфекция за счет домохозяйства"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Self-financed disinfection service"
+  * ^designation[=].value = "Disinfection in Household Accounts"
 
 * #935 "Oʻlat profilaktikasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Профилактика чумы"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Plague prevention"
+  * ^designation[=].value = "Plague Prevention"
 
 * #937 "Avtoxoʻjaligi"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Автохозяйство"
+  * ^designation[=].value = "Автомобильная промышленность"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Motor transport department"
+  * ^designation[=].value = "Automobile Industry"
 
 * #939 "Tibbiy omborxonasi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Медицинский склад"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Medical warehouse"
+  * ^designation[=].value = "Medical Warehouse"
 
 * #999 "Sogʻliqni saqlash tizimining boshqa tashkilotlari"
   * ^designation[0].language = #ru
-  * ^designation[=].value = "Другие организации системы здравоохранения"
+  * ^designation[=].value = "Другие организации здравоохранения"
   * ^designation[+].language = #en
-  * ^designation[=].value = "Other organizations within the healthcare system"
+  * ^designation[=].value = "Other Organizations of the Healthcare System"

@@ -107,7 +107,7 @@ Description: "Example of an immunization recommendation with non-mandatory eleme
 
 * date = "2025-08-01T10:00:00+05:00"
 
-* authority = Reference(example-organization)
+* authority = Reference(example-uz-core-organization)
 
 * recommendation[0].vaccineCode[0] = $cvx#03 "measles, mumps and rubella virus vaccine"
 * recommendation[0].targetDisease[0] = $sct#14189004 "Measles"

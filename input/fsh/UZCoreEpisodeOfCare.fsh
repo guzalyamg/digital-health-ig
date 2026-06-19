@@ -79,7 +79,7 @@ Usage: #example
 * diagnosis[0].use.coding[0].code = #DD
 * diagnosis[0].use.text = "Primary diagnosis"
 * patient = Reference(example-salim)
-* managingOrganization = Reference(example-organization)
+* managingOrganization = Reference(example-uz-core-organization)
 
 * period.start = "2025-08-01"
 
@@ -113,7 +113,7 @@ Usage: #example
 * diagnosis[0].use.coding[0].code = #DD
 * diagnosis[0].use.text = "Primary diagnosis"
 * patient = Reference(example-emma)
-* managingOrganization = Reference(example-organization)
+* managingOrganization = Reference(example-uz-core-organization)
 
 * period.start = "2025-08-01"
 * careManager = Reference(example-practitioner)

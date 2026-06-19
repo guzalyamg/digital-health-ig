@@ -1,8 +1,12 @@
 ValueSet: OrganizationalSubordinationInstitutionVS
 Id: organizational-subordination-institution-vs
-Title: "Organizational subordination institution"
-Description: "Defines the type of medical organizations without forming a legal entity"
+Title: "Organizational Subordination Institution"
+Description: "Organizational Subordination Institution"
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/organizational-subordination-institution-vs"
+
+* ^status = #active
 * ^experimental = true
-* ^language = #uz
-* include codes from system organizational-subordination-institution-cs
+* ^publisher = "Uzinfocom"
+
+* include codes from system organizational-subordination-institution-cs 
+

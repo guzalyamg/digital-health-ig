@@ -1,8 +1,12 @@
 ValueSet: NomenclatureGroupVS
 Id: nomenclature-group-vs
-Description: "High-level classification of healthcare institutions by functional category (e.g., hospitals, outpatient clinics, emergency services). This is a broad grouping defined by the Ministry of Health; for detailed institution types, see OrganizationalStructureVS."
-Title:  "Nomenclature group"
+Title: "Nomenclature Group"
+Description: "Nomenclature Group"
+
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/nomenclature-group-vs"
+* ^status = #active
 * ^experimental = true
-* ^language = #uz
+* ^publisher = "Uzinfocom"
+
 * include codes from system nomenclature-group-cs
+

@@ -1,247 +1,176 @@
-Invariant: uzcore-org-1
-Description: "SHIF organization identifier must match the pattern ^[A-Z]{3}[0-9]{6}$ — 3 uppercase Latin letters followed by 6 digits (e.g., OAA000024)"
-* severity = #error
-* expression = "matches('^[A-Z]{3}[0-9]{6}$')"
-
 Profile: UZCoreOrganization
 Parent: Organization
 Id: uz-core-organization
 Title: "UZ Core Organization"
-Description: "Uzbekistan Core Organization profile, used to define healthcare organizations and sub-units"
+Description: "Uzbekistan Core Organization profile, used to represent healthcare organizations in Uzbekistan"
 * ^experimental = true
 * ^status = #active
-* ^date = "2025-02-24"
-* ^publisher = "Uzinfocom"
-
-* extension contains CoverageArea named coverage-area 0..1 MS
 
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Ways an organization can be categorized"
 * identifier ^slicing.ordered = false
-* identifier contains taxId 0..1 MS and argosId 0..1 MS and shifId 0..1 MS
+* identifier ^slicing.description = "Slicing of organization identifiers by system"
+* identifier contains
+    taxId      0..1 MS and
+    argosId    0..1 MS and
+    shifId     0..1 MS and
+    minzdravId 0..1 MS
 
-* insert TaxIdentifier
+* identifier[taxId]
+  * use = #official
+  * type = $identifier-type#TAX
+  * system 1..1 MS
+  * system = $organization-tax-id-system
+  * value 1..1 MS
 
 * identifier[argosId]
+  * use = #official
+  * type = $identifier-type#XX
   * system 1..1 MS
   * system = $organization-argos-id-system
-  * type 1..1 MS
-  * type = $identifier-type#XX "Organization Identifier"
-  * use = #official
   * value 1..1 MS
 
 * identifier[shifId]
-  ^short = "Identifier assigned by the State Health Insurance Fund (SHIF)"
+  * use = #official
+  * type = $identifier-type#NIIP
   * system 1..1 MS
   * system = $organization-shif-id-system
-  * type 1..1 MS
-  * type = $identifier-type#NIIP "National Insurance Payor Identifier (Payor)"
-  * use = #official
   * value 1..1 MS
-  * value ^short = "SHIF organization identifier (3 uppercase Latin letters + 6 digits, e.g. OAA000024)"
-  * value obeys uzcore-org-1
-  * value ^example[0].label = "SHIF organization identifier"
-  * value ^example[0].valueString = "OAA000024"
-  * period 0..1 MS
-    * start MS
-    * end MS
-  * assigner 0..1 MS
-    * ^short = "Reference to the State Health Insurance Fund (SHIF) organization (Organization with type.coding #pay)"
 
-* active 0..1 MS
+* identifier[minzdravId]
+  * use = #official
+  * type = $identifier-type#XX
+  * system 1..1 MS
+  * system = "https://dhp.uz/fhir/core/sid/org/uz/minzdrav"
+  * value 1..1 MS
+
+* active MS
+
 
 * type MS
-* type.coding ^slicing.discriminator.type = #value
-* type.coding ^slicing.discriminator.path = "system"
-* type.coding ^slicing.rules = #open
-* type.coding ^slicing.description = "Organization categorization"
-* type.coding ^slicing.ordered = false
+* type ^slicing.discriminator.type = #value
+* type ^slicing.discriminator.path = "coding.system"
+* type ^slicing.rules = #open
+* type ^slicing.ordered = false
+* type ^slicing.description = "Slicing of organization type by coding system"
+* type contains
+    organizationType           0..* MS and
+    subordinationGroup         0..1 MS and
+    nomenclatureGroup          0..1 MS and
+    organizationalStructure    0..1 MS and
+    organizationalServiceGroup 0..* MS and
+    specialization             0..* MS and
+    withoutLegalStatus         0..1 MS and
+    organizationGrouping       0..1 MS
 
-* type.coding contains
-    organizationType 0..* MS and
-    subordinationGroup 0..1 MS and
-    nomenclatureGroup 0..1 MS and //organizationalStructure is child of nomenclatureGroup
-    organizationalStructure 0..1 MS and
-    organizationalServiceGroup 0..* MS and //specialization is child of organizationalServiceGroup
-    specialization 0..* MS and
-    withoutLegalStatus 0..1 MS and
-    organizationGrouping 0..1 MS
+* type[organizationType] from OrganizationTypeVS (required)
+* type[organizationType].coding 1..* MS
+* type[organizationType].coding.system 1..1 MS
+* type[organizationType].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-types-uz-cs"
+* type[organizationType].coding.code 1..1 MS
 
-* type.coding[organizationType]
-  ^short = "Вид организации"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-types-uz-cs"
-  * code 1..1 MS
-  * code from organization-types-uz-vs (required)
-* type.coding[subordinationGroup]
-  ^short = "Группа подчинения медорганизации"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-subordination-group-cs"
-  * code 1..1 MS
-  * code from organizational-subordination-group-vs (required)
-* type.coding[nomenclatureGroup]
-  ^short = "Определяет группу номенклатуры (группировку учреждений)"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/nomenclature-group-cs"
-  * code 1..1 MS
-  * code from nomenclature-group-vs (required)
-* type.coding[organizationalStructure]
-  ^short = "Определяет организационную структуру медучреждения"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-structure-cs"
-  * code 1..1 MS
-  * code from organizational-structure-vs (required)
-* type.coding[organizationalServiceGroup]
-  ^short = "Определяет организационно-сервисную группу медучреждения"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-service-group-cs"
-  * code 1..1 MS
-  * code from organizational-service-group-vs (required)
-* type.coding[specialization]
-  ^short = "Определяет специализацию медорганизации"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-specialization-cs"
-  * code 1..1 MS
-  * code from organizational-specialization-vs (required)
-* type.coding[withoutLegalStatus]
-  ^short = "Определяет тип медорганизаций без образования юридического лица"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-subordination-institution-cs"
-  * code 1..1 MS
-  * code from organizational-subordination-institution-vs (required)
-* type.coding[organizationGrouping]
-  ^short = "Определяет тип группировки межучреждению"
-  * system 1..1 MS
-  * system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-grouping-uz-cs"
-  * code 1..1 MS
-  * code from organization-grouping-uz-vs (required)
+* type[subordinationGroup] from OrganizationalSubordinationGroupVS (required)
+* type[subordinationGroup].coding 1..* MS
+* type[subordinationGroup].coding.system 1..1 MS
+* type[subordinationGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-subordination-group-cs"
+* type[subordinationGroup].coding.code 1..1 MS
 
-* insert MultilingualName(организации)
+* type[nomenclatureGroup] from NomenclatureGroupVS (required)
+* type[nomenclatureGroup].coding 1..* MS
+* type[nomenclatureGroup].coding.system 1..1 MS
+* type[nomenclatureGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/nomenclature-group-cs"
+* type[nomenclatureGroup].coding.code 1..1 MS
+
+* type[organizationalStructure] from OrganizationalStructureVS (required)
+* type[organizationalStructure].coding 1..* MS
+* type[organizationalStructure].coding.system 1..1 MS
+* type[organizationalStructure].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-structure-cs"
+* type[organizationalStructure].coding.code 1..1 MS
+
+* type[organizationalServiceGroup] from OrganizationalServiceGroupVS (required)
+* type[organizationalServiceGroup].coding 1..* MS
+* type[organizationalServiceGroup].coding.system 1..1 MS
+* type[organizationalServiceGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-service-group-cs"
+* type[organizationalServiceGroup].coding.code 1..1 MS
+
+* type[specialization] from OrganizationalSpecializationVS (required)
+* type[specialization].coding 1..* MS
+* type[specialization].coding.system 1..1 MS
+* type[specialization].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-specialization-cs"
+* type[specialization].coding.code 1..1 MS
+
+* type[withoutLegalStatus] from OrganizationalSubordinationInstitutionVS (required)
+* type[withoutLegalStatus].coding 1..* MS
+* type[withoutLegalStatus].coding.system 1..1 MS
+* type[withoutLegalStatus].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-subordination-institution-cs"
+* type[withoutLegalStatus].coding.code 1..1 MS
+
+* type[organizationGrouping] from OrganizationGroupVS (required)
+* type[organizationGrouping].coding 1..* MS
+* type[organizationGrouping].coding.system 1..1 MS
+* type[organizationGrouping].coding.code 1..1 MS
+
+* name MS
+* insert MultilingualName(Organization)
 
 * contact MS
+
+
 * partOf MS
+* partOf only Reference(UZCoreOrganization)
+
+
 * endpoint MS
 
-Instance: example-organization
-InstanceOf: UZCoreOrganization
-Description: "Example of a republican-level oncology center (Respublika onkologiya markazi) with full categorization, contact, and address"
-Usage: #example
-* language = #uz
-* identifier[taxId]
-  * use = #official
-  * type = $identifier-type#TAX "Tax ID number"
-  * system = $organization-tax-id-system
-  * value = "200935935"
-* identifier[argosId]
-  * use = #official
-  * type = $identifier-type#XX "Organization Identifier"
-  * system = $organization-argos-id-system
-  * value = "9512"
-* identifier[shifId]
-  * use = #official
-  * type = $identifier-type#NIIP "National Insurance Payor Identifier (Payor)"
-  * system = $organization-shif-id-system
-  * value = "OAA000024"
-  * period.start = "2024-01-15"
-* active = true
-* type.coding[organizationType] = organization-types-uz-cs#I "Boshqaruv boyicha taqsimlanishi"
-* type.coding[subordinationGroup] = organizational-subordination-group-cs#I_1 "Respublika tassarufidagi muassasalari"
-* type.coding[nomenclatureGroup] = nomenclature-group-cs#II_100 "Shifoxona muassasalari"
-* type.coding[organizationalStructure] = organizational-structure-cs#110 "Ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazi"
-* type.coding[organizationalServiceGroup] = organizational-service-group-cs#III_100 "Poliklinika bo'limi va statsionar bo'limi mavjud"
-* type.coding[specialization] = organizational-specialization-cs#145.0 "Kattalar onkologiyasi"
-* name = "Respublika onkologiya markazi"
-  * extension[translation][0]
-    * extension[lang][0]
-      * valueCode = #ru
-    * extension[content][+]
-      * valueString = "Республиканский онкологический центр"
-  * extension[translation][+]
-    * extension[lang][0]
-      * valueCode = #kaa
-    * extension[content][+]
-      * valueString = "Respublika onkologiya orayı"
-* contact
-  * telecom[+]
-    * system = #phone
-    * value = "+998711234567"
-  * telecom[+]
-    * system = #email
-    * value = "info@example.uz"
-  * telecom[+]
-    * system = #url
-    * value = "https://cancercenter.uz"
-  * address
-    * line = "Farobiy ko'chasi, 383"
-    * state = "1726"
-    * district = "1726269"
-    * country = "UZ"
 
-Instance: xonobod-medical-association
+Instance: example-uz-core-organization
 InstanceOf: UZCoreOrganization
-Description: "Example of a medical association translated from Hepatitis JSON"
 Usage: #example
-* language = #uz
-* identifier[taxId]
-  * use = #official
-  * type = $identifier-type#TAX "Tax ID number"
-  * system = $organization-tax-id-system
-  * value = "200248215"
-* active = true
-* name = "Xonobod shahar tibbiyot birlashmasi"
-* type.coding[subordinationGroup] = organizational-subordination-group-cs#I_3 "Tuman va shaharlar boshqaruv tarkibidagi"
-* type.coding[organizationalStructure] = organizational-structure-cs#148 "Tibbiyot birlashmasi"
-* type.coding[organizationalServiceGroup][0] = organizational-service-group-cs#III_100 "Poliklinika bo'limi va statsionar bo'limi mavjud"
-* type.coding[organizationalServiceGroup][+] = organizational-service-group-cs#III_500 "Poliklinika bo'limi mavjud"
-* contact
-  * telecom[+]
-    * system = #phone
-    * value = "1341353613"
-  * telecom[+]
-    * system = #email
-    * value = "health@example.uz"
-  * address
-    * line = "A.Fitrat ko'chasi, 1"
-    * state = "1703"
-    * district = "1703408"
-    * country = "UZ"
-* extension[coverage-area].valueCodeableConcept = states-cs#1703 "Andijon viloyati"
+Title: "Example UZ Core Organization - Republican Oncology Center"
+Description: "Example of a healthcare organization in Uzbekistan - Republican Oncology Center"
 
-Instance: tashkent-diseases-hospital
-InstanceOf: UZCoreOrganization
-Description: "Example of a hospital organization"
-Usage: #example
-* active = true
-* identifier[0]
-  * system = $organization-tax-id-system
-  * type = $identifier-type#TAX "Tax ID number"
-  * use = #official
-  * value = "203108505"
-* identifier[+]
-  * system = $organization-argos-id-system
-  * type = $identifier-type#XX "Organization Identifier"
-  * use = #official
-  * value = "22640"
 * language = #uz
-* name = "Toshkent viloyati yuqumli kasalliklar shifoxonasi"
-  * extension[translation][0]
-    * extension[lang]
-      * valueCode = #ru
-    * extension[content][+]
-      * valueString = "Ташкентская областная инфекционная больница"
-  * extension[translation][+]
-    * extension[lang][0]
-      * valueCode = #kaa
-    * extension[content][+]
-      * valueString = "Tashkent wálayat juqpalı kesellikler emlewxanası"
-* type
-  * coding[0] = organization-types-uz-cs#I "Boshqaruv boyicha taqsimlanishi"
-  * coding[+] = organizational-subordination-group-cs#I_2 "Hududiy boshqaruv tarkibidagi"
-  * coding[+] = nomenclature-group-cs#II_100 "Shifoxona muassasalari"
-  * coding[+] = organizational-structure-cs#146 "Shifoxonasi"
-  * coding[+] = organizational-service-group-cs#III_200 "Statsionar bo'limi mavjud"
-  * coding[+] = organizational-specialization-cs#145.0 "Kattalar onkologiyasi"
-  * coding[+] = organizational-subordination-institution-cs#STIR-I_30 "Oilaviy poliklinika"
+
+* identifier[taxId].use = #official
+* identifier[taxId].type = $identifier-type#TAX "Tax ID number"
+* identifier[taxId].system = $organization-tax-id-system
+* identifier[taxId].value = "203108505"
+
+* identifier[argosId].use = #official
+* identifier[argosId].type = $identifier-type#XX "Organization Identifier"
+* identifier[argosId].system = $organization-argos-id-system
+* identifier[argosId].value = "22640"
+
+* active = true
+
+* type[organizationType].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organization-types-uz-cs"
+* type[organizationType].coding.code = #I
+* type[organizationType].coding.display = "Boshqaruv bo'yicha taqsimlanishi"
+
+* type[subordinationGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-subordination-group-cs"
+* type[subordinationGroup].coding.code = #I_1
+* type[subordinationGroup].coding.display = "Respublika tassarufidagi muassasalari"
+
+* type[nomenclatureGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/nomenclature-group-cs"
+* type[nomenclatureGroup].coding.code = #II_100
+* type[nomenclatureGroup].coding.display = "Shifoxona muassasalari"
+
+* type[organizationalStructure].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-structure-cs"
+* type[organizationalStructure].coding.code = #146
+* type[organizationalStructure].coding.display = "Shifoxonasi"
+
+* type[organizationalServiceGroup].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-service-group-cs"
+* type[organizationalServiceGroup].coding.code = #III_200
+* type[organizationalServiceGroup].coding.display = "Statsionar bo'limi mavjud"
+
+* type[specialization].coding.system = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-specialization-cs"
+* type[specialization].coding.code = #145
+* type[specialization].coding.display = "Kattalar onkologiyasi"
+
+* name = "Respublika Onkologiya Markazi"
+* name.extension[translation][0].extension[lang].valueCode = #ru
+* name.extension[translation][0].extension[content].valueString = "Республиканский онкологический центр"
+* name.extension[translation][+].extension[lang].valueCode = #en
+* name.extension[translation][=].extension[content].valueString = "Republican Oncology Center"

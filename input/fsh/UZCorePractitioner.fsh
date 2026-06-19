@@ -79,7 +79,7 @@ Usage: #example
   * size = 1024
 * qualification
   * code = $qualification-codes#DIP
-  * issuer = Reference(example-organization)
+  * issuer = Reference(example-uz-core-organization)
 
 Instance: example-practitioner-gender-other
 InstanceOf: UZCorePractitioner
