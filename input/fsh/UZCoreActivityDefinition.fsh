@@ -79,7 +79,7 @@ Description: "Example of an activity definition for BCG vaccination in Uzbekista
 
 * intent = $request-intent#proposal
 
-* priority = $request-priority#R "routine"
+* priority = $request-priority#routine
 
 * participant[0].type = $action-participant-type#practitioner
 * participant[0].role = $sct#309343006 "Doctor"
