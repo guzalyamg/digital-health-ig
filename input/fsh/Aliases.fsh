@@ -180,3 +180,7 @@ Alias: $service-request-status = http://hl7.org/fhir/request-status
 Alias: $task-status = http://hl7.org/fhir/task-status
 Alias: $task-intent = http://hl7.org/fhir/task-intent
 Alias: $sr-lab-researchs-cs = https://terminology.dhp.uz/fhir/core/CodeSystem/sr-lab-researchs-cs
+Alias: $participant-resource-types = http://hl7.org/fhir/ValueSet/participant-resource-types
+Alias: $resource-types = http://hl7.org/fhir/fhir-types
+Alias: $request-priority = http://hl7.org/fhir/ValueSet/request-priority
+Alias: $action-participant-role = http://hl7.org/fhir/ValueSet/action-participant-role

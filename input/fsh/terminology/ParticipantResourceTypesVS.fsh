@@ -1,11 +1,14 @@
 ValueSet: ParticipantResourceTypesVS
 Id: participant-resource-types-vs
-Title: "Participant resource types translations"
-Description: "Participant resource types codes with Uzbek and Russian translations"
+Title: "Participant Resource Types VS"
+Description: "ValueSet for Partitipant Resource Types codes with Uzbek and Russian translations"
 
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/participant-resource-types-vs"
+
+
 * ^experimental = true
+* ^status = #active
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ParticipantResourceTypesCS)
 
-* include codes from system $action-participant-type
+* include codes from system $participant-resource-types
