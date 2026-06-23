@@ -70,7 +70,7 @@ Usage: #example
 
 * status = #active
 
-* type = $claim-type#institutional
+* type = $claim-response-type#institutional
 
 * use = #claim
 
