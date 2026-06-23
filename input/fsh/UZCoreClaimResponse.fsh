@@ -63,19 +63,22 @@ Description: "Uzbekistan Core Claim Response profile, used to represent claim ad
 Instance: example-claim-response
 InstanceOf: UZCoreClaimResponse
 Title: "Example Claim Response"
-Description: "An example claim response for"
+Description: "An example claim response for institutional claim"
 Usage: #example
 
-* status = #active "Active"
-* type = ClaimResponseTypeCS#institutional
+* language = #uz
+
+* status = #active
+
+* type = $claim-type#institutional
 
 * use = #claim
 
-* patient = Reference(Patient/example-123)
+* patient = Reference(Patient/example-salim)
 
 * created = "2026-03-10"
 
-* insurer = Reference(Insurer/example-)
+* insurer = Reference(Organization/example-organization)
 
 * outcome = #complete
 
@@ -86,6 +89,6 @@ Usage: #example
 * preAuthPeriod.start = "2026-03-11"
 * preAuthPeriod.end = "2026-05-11"
 
-* total[0].category = $claim-response-category#benefit "Benefit Amount"
+* total[0].category = http://terminology.hl7.org/CodeSystem/adjudication#benefit "Benefit Amount"
 * total[0].amount.value = 10000
 * total[0].amount.currency = #UZS

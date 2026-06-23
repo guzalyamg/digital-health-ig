@@ -11,4 +11,4 @@ Description: "ValueSet for Partitipant Resource Types codes with Uzbek and Russi
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ParticipantResourceTypesCS)
 
-* include codes from system $participant-resource-types
+* include codes from system $fhir-types

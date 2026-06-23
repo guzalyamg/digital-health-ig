@@ -67,7 +67,7 @@ Description: "Task for family doctor approval"
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-uz-core-organization)
+* owner = Reference(Organization/example-organization)
 
 * requestedPeriod.start = "2026-03-05"
 * requestedPeriod.end = "2026-03-06"
@@ -100,7 +100,7 @@ Description: "Task for specialist approval"
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-uz-core-organization)
+* owner = Reference(Organization/example-organization)
 
 * requestedPeriod.start = "2026-03-06"
 * requestedPeriod.end = "2026-03-07"
@@ -134,7 +134,7 @@ Description: "Task for regional commission approval"
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-uz-core-organization)
+* owner = Reference(Organization/example-organization)
 
 * requestedPeriod.start = "2026-03-07"
 * requestedPeriod.end = "2026-03-08"
@@ -167,7 +167,7 @@ Description: "Task for national commission approval"
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-uz-core-organization)
+* owner = Reference(Organization/example-organization)
 
 * requestedPeriod.start = "2026-03-08"
 * requestedPeriod.end = "2026-03-10"
@@ -201,7 +201,7 @@ Description: "Task for hospitalization approval"
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-uz-core-organization)
+* owner = Reference(Organization/example-organization)
 
 * requestedPeriod.start = "2026-03-10"
 * requestedPeriod.end = "2026-05-10"

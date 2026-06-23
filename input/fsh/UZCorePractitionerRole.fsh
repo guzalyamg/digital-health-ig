@@ -60,6 +60,6 @@ Usage: #example
 * language = #uz
 * active = true
 * practitioner = Reference(Practitioner/example-practitioner)
-* organization = Reference(Organization/example-uz-core-organization)
+* organization = Reference(Organization/example-organization)
 * code.text = "Surgeon at Republican Specialized Scientific Center of Surgery, inpatient care"
 * healthcareService = Reference(HealthcareService/example-healthcareservice)

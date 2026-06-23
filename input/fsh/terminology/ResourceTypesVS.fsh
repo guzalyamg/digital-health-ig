@@ -11,4 +11,4 @@ Description: "ValueSet for resource types used in ActivityDefinition kind elemen
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ResourceTypesCS)
 
-* include codes from system $resource-types
+* include codes from system $fhir-types

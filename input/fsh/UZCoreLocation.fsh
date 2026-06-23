@@ -73,7 +73,7 @@ Usage: #example
   * city = "22070022"
   * district = "1735243"
   * country = "UZ"
-* managingOrganization = Reference(Organization/example-uz-core-organization)
+* managingOrganization = Reference(Organization/example-organization)
 
 Instance: example-location-2
 InstanceOf: UZCoreLocation
