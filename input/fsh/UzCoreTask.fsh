@@ -44,7 +44,7 @@ Description: "Profile for Uz Core Task"
 
 * obeys uzcore-tsk-1
 
-Instance: example-task-1
+Instance: example-task-family-doctor
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 1 - Family Doctor Approval"
@@ -55,19 +55,19 @@ Description: "Task for family doctor approval"
 
 * code = task-codes-cs#approve-family-doctor "Family doctor approval"
 
-* basedOn[0] = Reference(ServiceRequest/example-uz-core-service-request)
+* basedOn[0] = Reference(ServiceRequest/example-cbc-order)
 
 * status = task-status-cs#in-progress "In Progress"
 
-* businessStatus = task-business-status-cs#active "Active"
+* businessStatus = task-business-status-cs#overdue "Overdue"
 
 * intent = task-intent-cs#order "Order"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-05"
 * requestedPeriod.end = "2026-03-06"
@@ -75,32 +75,30 @@ Description: "Task for family doctor approval"
 * executionPeriod.end = "2026-03-06"
 
 
-Instance: example-task-2
+Instance: example-task-specialist
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 2 - Specialist Approval"
 Description: "Task for specialist approval"
 
-// * identifier[0].system = "https://terminology.dhp.uz/fhir/core/NamingSystem/task-identifier"
-// * identifier[0].value = "TASK-2026-002"
 
 * code = task-codes-cs#approve-specialist "Specialist approval"
 
-* basedOn[0] = Reference(ServiceRequest/example-uz-core-service-request)
+* basedOn[0] = Reference(ServiceRequest/example-cbc-order)
 
-* partOf[0] = Reference(Task/example-task-1)
+* partOf[0] = Reference(Task/example-task-specialist)
 
 * status = task-status-cs#requested "Requested"
 
-* businessStatus = task-business-status-cs#active "Active"
+* businessStatus = task-business-status-cs#overdue "Overdue"
 
 * intent = task-intent-cs#order "Order"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-david)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-06"
 * requestedPeriod.end = "2026-03-07"
@@ -109,7 +107,7 @@ Description: "Task for specialist approval"
 
 
 
-Instance: example-task-3
+Instance: example-task-regional-commission
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 3 - Regional Commission Approval"
@@ -120,9 +118,9 @@ Description: "Task for regional commission approval"
 
 * code = task-codes-cs#approve-regional-commission "Regional commission approval"
 
-* basedOn[0] = Reference(ServiceRequest/example-uz-core-service-request)
+* basedOn[0] = Reference(ServiceRequest/example-cbc-order)
 
-* partOf[0] = Reference(Task/example-task-2)
+* partOf[0] = Reference(Task/example-task-regional-commission)
 
 * status = task-status-cs#completed "Completed"
 
@@ -130,11 +128,11 @@ Description: "Task for regional commission approval"
 
 * intent = task-intent-cs#order "Order"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-emma)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-07"
 * requestedPeriod.end = "2026-03-08"
@@ -142,7 +140,7 @@ Description: "Task for regional commission approval"
 * executionPeriod.end = "2026-03-08"
 
 
-Instance: example-task-4
+Instance: example-task-national-commission
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 4 - National Commission Approval"
@@ -153,9 +151,9 @@ Description: "Task for national commission approval"
 
 * code = task-codes-cs#approve-national-commission "Republican commission approval"
 
-* basedOn[0] = Reference(ServiceRequest/example-uz-core-service-request)
+* basedOn[0] = Reference(ServiceRequest/example-cbc-order)
 
-* partOf[0] = Reference(Task/example-task-3)
+* partOf[0] = Reference(Task/example-task-national-commission)
 
 * status = task-status-cs#completed "Completed"
 
@@ -163,11 +161,11 @@ Description: "Task for national commission approval"
 
 * intent = task-intent-cs#order "Order"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-david)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-08"
 * requestedPeriod.end = "2026-03-10"
@@ -176,7 +174,7 @@ Description: "Task for national commission approval"
 
 
 
-Instance: example-task-5
+Instance: example-task-hospitalization
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 5 - Hospitalization Approval"
@@ -187,9 +185,9 @@ Description: "Task for hospitalization approval"
 
 * code = task-codes-cs#approve-hospitalization "Hospitalization approval"
 
-* basedOn[0] = Reference(ServiceRequest/example-uz-core-service-request)
+* basedOn[0] = Reference(ServiceRequest/example-cbc-order)
 
-* partOf[0] = Reference(Task/example-task-4)
+* partOf[0] = Reference(Task/example-task-hospitalization)
 
 * status = task-status-cs#completed "Completed"
 
@@ -197,11 +195,11 @@ Description: "Task for hospitalization approval"
 
 * intent = task-intent-cs#order "Order"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-emma)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-10"
 * requestedPeriod.end = "2026-05-10"
@@ -223,7 +221,7 @@ Description: "Example Task referencing a ServiceRequest in Uzbekistan Core profi
 // * identifier[0].system = "https://terminology.dhp.uz/fhir/core/NamingSystem/task-identifier"
 // * identifier[0].value = "task-001"
 
-* basedOn = Reference(ServiceRequest/example-uz-core-service-request)
+* basedOn = Reference(ServiceRequest/example-cbc-order)
 
 * status = #requested
 * intent = #order
@@ -232,8 +230,7 @@ Description: "Example Task referencing a ServiceRequest in Uzbekistan Core profi
 
 * businessStatus = task-business-status-cs#on-hold "Suspended"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-emma)
 * authoredOn = "2026-01-01T10:00:00Z"
-
